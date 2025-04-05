@@ -50,13 +50,9 @@ namespace Project2
 
         private void wordWrapToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (wordWrapToolStripMenuItem.Checked == true) {
-                richTextBox1.WordWrap = false;
-            }
-            if (wordWrapToolStripMenuItem.Checked == false)
-            {
-                richTextBox1.WordWrap = true;
-            }
+            wordWrapToolStripMenuItem.Checked = !wordWrapToolStripMenuItem.Checked;
+
+            richTextBox1.WordWrap = wordWrapToolStripMenuItem.Checked;
         }
 
         private void formatToolStripMenuItem_Click(object sender, EventArgs e)
